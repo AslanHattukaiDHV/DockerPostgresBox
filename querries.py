@@ -5,7 +5,7 @@ conn = connect_to_database()
 
 cur = conn.cursor()
 
-cur.execute("SELECT name, species FROM animals WHERE age>5")
+cur.execute("SELECT ID from avocado WHERE Region == 'Albany'")
 
 
 rows = cur.fetchall()

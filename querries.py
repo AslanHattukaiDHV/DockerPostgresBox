@@ -5,7 +5,7 @@ conn = connect_to_database()
 
 cur = conn.cursor()
 
-cur.execute("SELECT ID from avocado WHERE Region == 'Albany'")
+cur.execute("SELECT avocado.date from avocado WHERE Region = 'Albany'")
 
 
 rows = cur.fetchall()

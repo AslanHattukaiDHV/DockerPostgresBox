@@ -5,14 +5,14 @@ conn = connect_to_database()
 
 #open cursor
 cur = conn.cursor()
-cur.execute("SELECT * FROM animals")
+cur.execute("SELECT * FROM avocado")
 rows = cur.fetchall()
 
 if not len(rows):
     print("Empty")
 else:
-    for row in rows:
-        print(row)
+    rownr =len(rows)
+    print (rownr)
 
 
 cur.close()

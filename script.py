@@ -7,13 +7,13 @@ conn = connect_to_database()
 cur = conn.cursor()
 cur.execute("SELECT * FROM avocado")
 rows = cur.fetchall()
+first_row = cur.fetchone()
 
 if not len(rows):
     print("Empty")
+
 else:
-    rownr =len(rows)
-    print (rownr)
-
-
+    print (first_row)
+    
 cur.close()
 conn.close()
